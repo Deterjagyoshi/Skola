@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Fire_game.sln"
+    "dotnet.defaultSolution": "Skola.sln"
 }

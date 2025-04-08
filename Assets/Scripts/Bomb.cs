@@ -23,7 +23,7 @@ public class Bomb : MonoBehaviour
     // Start is called before the first frame update
     private CircleCollider2D circleCollider;
 
-    
+    // hej
 
     void Start()
     {
