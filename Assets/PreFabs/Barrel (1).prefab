@@ -163,8 +163,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8893bc3cf3512b54e8c6291978af32a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expansionSpeed: 1000
-  maxRadius: 5
+  expansionSpeed: 100
+  maxRadius: 10
   boom: 0
 --- !u!95 &6656293395626957549
 Animator:
@@ -234,7 +234,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 1280
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
