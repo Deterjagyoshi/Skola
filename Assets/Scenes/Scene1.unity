@@ -76222,7 +76222,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2048
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -83328,10 +83328,6 @@ PrefabInstance:
     - target: {fileID: 2513779872082108820, guid: 1d21e4417d977844c95a7e8a418da0e8, type: 3}
       propertyPath: m_Name
       value: Barrel (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4332737844717548990, guid: 1d21e4417d977844c95a7e8a418da0e8, type: 3}
-      propertyPath: m_ExcludeLayers.m_Bits
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4870992843588154124, guid: 1d21e4417d977844c95a7e8a418da0e8, type: 3}
       propertyPath: m_LocalPosition.x

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4610945610824158520}
   - component: {fileID: 2595864206490427815}
   - component: {fileID: 6656293395626957549}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Barrel (1)
   m_TagString: Boom
   m_Icon: {fileID: 0}
