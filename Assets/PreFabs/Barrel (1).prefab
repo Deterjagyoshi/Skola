@@ -131,7 +131,7 @@ CircleCollider2D:
     m_Bits: 503
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 520
+    m_Bits: 552
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -145,7 +145,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.0408082, y: 0}
@@ -166,6 +166,7 @@ MonoBehaviour:
   expansionSpeed: 100
   maxRadius: 10
   boom: 0
+  flingForce: 15
 --- !u!95 &6656293395626957549
 Animator:
   serializedVersion: 5
@@ -199,7 +200,7 @@ GameObject:
   - component: {fileID: 4332737844717548990}
   m_Layer: 9
   m_Name: Sigma boy
-  m_TagString: Untagged
+  m_TagString: DIE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

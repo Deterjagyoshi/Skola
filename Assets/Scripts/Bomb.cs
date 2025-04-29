@@ -10,11 +10,32 @@ public class Bomb : MonoBehaviour
     BoxCollider2D boxCol;
     Animator anim;
     private Rigidbody2D rb;
+
+    public float flingForce = 10f;
     private MovementStates state = MovementStates.idle;
     enum MovementStates {idle,boom};
     private void OnTriggerEnter2D(Collider2D collision){
         Debug.Log("Ja");
-        if(collision.gameObject.CompareTag("Sword")||collision.gameObject.CompareTag("Sword2")||collision.gameObject.CompareTag("Boom")||collision.gameObject.CompareTag("Spike")){
+        if(collision.gameObject.CompareTag("Sword")||collision.gameObject.CompareTag("Sword2")||collision.gameObject.CompareTag("Boom")||collision.gameObject.CompareTag("Spike")||collision.gameObject.CompareTag("SwordDOwn")){
+            
+
+           Transform parentTransform = collision.transform.parent;
+
+        if (parentTransform != null)
+        {
+            Rigidbody2D parentRb = parentTransform.GetComponent<Rigidbody2D>();
+
+            if (parentRb != null)
+                {
+                // Direction from this object to the parent
+                Vector2 direction = (parentRb.position - (Vector2)transform.position).normalized;
+
+                // Apply force to the parent object
+                parentRb.AddForce(direction * flingForce, ForceMode2D.Impulse);
+                }
+            
+        }
+        
             boom = true;
             state = MovementStates.boom;
             Debug.Log("Boom");}

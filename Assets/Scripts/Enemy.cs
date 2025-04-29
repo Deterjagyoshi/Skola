@@ -65,6 +65,9 @@ public class Enemy : MonoBehaviour
             health -= 1;}
         if(collision.gameObject.CompareTag("SwordDOwn")){
             health -= 3;}
+        if(collision.gameObject.CompareTag("DIE")){
+            health -= 3;
+        }
         if(collision.gameObject.CompareTag("Boom")){
             health -= 3;
         }}

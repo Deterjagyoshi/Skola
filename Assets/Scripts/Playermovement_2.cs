@@ -34,6 +34,8 @@ public class Playermovement_2 : MonoBehaviour
     private float Timer = 0f;
     private float Timer2 = 0f;
 
+    public bool isActive = true;
+
      
 
 
@@ -95,7 +97,7 @@ public class Playermovement_2 : MonoBehaviour
         }
         
          
-        if(!reel){
+        if(!reel && isActive){
         if(hangon){
             rb.velocity =  new Vector2(0,0);
             
@@ -106,6 +108,17 @@ public class Playermovement_2 : MonoBehaviour
         }}
         
         
+    }
+    public void DisableForOneSecond()
+    {
+        StartCoroutine(DisableTemporarily());
+    }
+
+    private IEnumerator DisableTemporarily()
+    {
+        isActive = false;
+        yield return new WaitForSeconds(1f);
+        isActive = true;
     }
     void Fling()
     {
@@ -175,8 +188,9 @@ public class Playermovement_2 : MonoBehaviour
             Bleed = false;
         }
         if(collision.gameObject.CompareTag("Boom")){
-            rb.velocity = new Vector2(rb.velocity.x,10f);
+            
             reel = true;
+            DisableForOneSecond();
             
         }
     }
